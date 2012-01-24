@@ -1,0 +1,3 @@
+export OPSCODE_USER='flype'
+export VAGRANT_ENVIRONMENT='vagrant'
+export OPSCODE_ORGNAME='peertransfer'
