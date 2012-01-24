@@ -1,7 +1,7 @@
 task :default => [:tmp_dirs, :update, :command_t, :link]
 
 task :update do
-  sh "git submodule update --init"
+  sh "cd ..; git submodule update --init"
 end
 
 task :link do
