@@ -120,8 +120,8 @@ map <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
 " wrap the word with quotes
-map ," ysiw"<cr>
-map ,' ysiw'<cr>
+map <Leader>" ysiw"<cr>
+map <Leader>' ysiw'<cr>
 
 " disable cursor keys in normal mode
 map <Left>  :echo "no!"<cr>
@@ -129,6 +129,8 @@ map <Right> :echo "no!"<cr>
 map <Up>    :echo "no!"<cr>
 map <Down>  :echo "no!"<cr>
 
+" run rspec in ruby projects
+map <Leader>t :w\|!clear; bundle exec rspec spec<cr>
 set backupdir=~/.vim/_backup    " where to put backup files.
 set directory=~/.vim/_temp      " where to put swap files.
 
