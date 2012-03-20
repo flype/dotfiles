@@ -129,6 +129,12 @@ map <Right> :echo "no!"<cr>
 map <Up>    :echo "no!"<cr>
 map <Down>  :echo "no!"<cr>
 
+" disable cursor keys in insert mode
+imap <Left> <NOP>
+imap <Right> <NOP>
+imap <Up> <NOP>
+imap <Down> <NOP>
+
 " run rspec in ruby projects
 map <Leader>t :w\|!clear; bundle exec rspec spec<cr>
 set backupdir=~/.vim/_backup    " where to put backup files.
