@@ -8,20 +8,24 @@ set background=dark
 colorscheme molokai
 set number
 set ruler       " show the cursor position all the time
-set cursorline
 set showcmd     " display incomplete commands
 
-" Allow backgrounding buffers without writing them, and remember marks/undo
-" for backgrounded buffers
+set wildmenu                      " Enhanced command line completion.
+set wildmode=list:longest         " Complete files like a shell.
+
+set nobackup                      " Don't make a backup before overwriting a file.
+set nowritebackup                 " And again.
+set directory=~/.vim/tmp//,.      " Keep swap files in one location
+
 set hidden
 
-"" Whitespace
 set nowrap                        " don't wrap lines
 set tabstop=2                     " a tab is two spaces
 set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
+
 " List chars
 set listchars=""                  " Reset the listchars
 set listchars=tab:\ \             " a tab should display as "  ", trailing whitespace as "."
@@ -62,6 +66,7 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-ruby/vim-ruby'
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
