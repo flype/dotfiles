@@ -5,7 +5,7 @@ set encoding=utf-8
 filetype plugin indent on
 
 set background=dark
-color molokai
+colorscheme molokai
 set number
 set ruler       " show the cursor position all the time
 set cursorline
@@ -87,7 +87,3 @@ imap <Left> <NOP>
 imap <Right> <NOP>
 imap <Up> <NOP>
 imap <Down> <NOP>
-
-set backupdir=~/.vim/_backup    " where to put backup files.
-set directory=~/.vim/_temp      " where to put swap files.
-
