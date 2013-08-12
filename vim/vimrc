@@ -4,8 +4,8 @@ set nocompatible
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
-set background=light
-colorscheme solarized
+set background=dark
+colorscheme vwilight
 set number
 set ruler       " show the cursor position all the time
 set showcmd     " display incomplete commands
@@ -25,6 +25,7 @@ set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
+set colorcolumn=80 " 80 columns line
 
 " List chars
 set listchars=""                  " Reset the listchars
@@ -42,7 +43,7 @@ set smartcase                     " ... unless they contain at least one capital
 function s:setupWrapping()
   set wrap
   set wrapmargin=2
-  set textwidth=72
+  set textwidth=80
 endfunction
 
 set autoread                      " Update open files when changed externally
@@ -64,6 +65,12 @@ NeoBundle 'tpope/vim-endwise'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'rizzatti/funcoo.vim'
+NeoBundle 'rizzatti/dash.vim'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'myusuf3/numbers.vim'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-surround'
 
 NeoBundleCheck
 
@@ -77,12 +84,16 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+noremap <leader><leader> <c-^>
+
 " Edit another file in the same directory as the current file
 " uses expression to extract path from current file's path
 map <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
+map <leader>f :CtrlP pwd<cr>
+map <leader>b :CtrlPBuffer<cr>
 
 " disable cursor keys in normal mode
 map <Left>  :echo "no!"<cr>
@@ -95,6 +106,22 @@ imap <Left> <NOP>
 imap <Right> <NOP>
 imap <Up> <NOP>
 imap <Down> <NOP>
+
+
+" Strip trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
@@ -118,6 +145,9 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.json set ft=javascript
   autocmd BufNewFile,BufRead *.eco set ft=html
 endif
+
+" dash search under the cursor
+nmap <silent> <leader>d <Plug>DashGlobalSearch
 
 " Use poweline fonts in airline
 let g:airline_powerline_fonts=1
