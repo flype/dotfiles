@@ -1,25 +1,76 @@
-set encoding=utf-8
 set nocompatible
+syntax enable
+set encoding=utf-8
 
-syntax enable                     " Turn on syntax highlighting.
-filetype plugin indent on         " Turn on file type detection.
+filetype plugin indent on
 
-set t_Co=256
 set background=dark
-colorscheme molokai
+color molokai
+set number
+set ruler       " show the cursor position all the time
+set cursorline
+set showcmd     " display incomplete commands
 
-set ttyfast
+" Allow backgrounding buffers without writing them, and remember marks/undo
+" for backgrounded buffers
+set hidden
 
-set showcmd                       " Display incomplete commands.
-set showmode                      " Display the mode you're in.
+"" Whitespace
+set nowrap                        " don't wrap lines
+set tabstop=2                     " a tab is two spaces
+set shiftwidth=2                  " an autoindent (with <<) is two spaces
+set expandtab                     " use spaces, not tabs
+set list                          " Show invisible characters
+set backspace=indent,eol,start    " backspace through everything in insert mode
+" List chars
+set listchars=""                  " Reset the listchars
+set listchars=tab:\ \             " a tab should display as "  ", trailing whitespace as "."
+set listchars+=trail:.            " show trailing spaces as dots
+set listchars+=extends:>          " The character to show in the last column when wrap is
+                                  " off and the line continues beyond the right of the screen
+set listchars+=precedes:<         " The character to show in the last column when wrap is
+                                  " off and the line continues beyond the right of the screen
+"" Searching
+set hlsearch                      " highlight matches
+set incsearch                     " incremental searching
+set ignorecase                    " searches are case insensitive...
+set smartcase                     " ... unless they contain at least one capital letter
+function s:setupWrapping()
+  set wrap
+  set wrapmargin=2
+  set textwidth=72
+endfunction
 
-set backspace=indent,eol,start    " Intuitive backspacing.
+" clear the search buffer when hitting return
+:nnoremap <CR> :nohlsearch<cr>
 
-set hidden                        " Handle multiple buffers better.
+let mapleader=","
 
-set wildmenu                      " Enhanced command line completion.
-set wildmode=list:longest         " Complete files like a shell.
+" easier navigation between split windows
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
-set ignorecase                    " Case-insensitive searching.
-set smartcase                     " But case-sensitive if expression contains a capital letter.
+" Edit another file in the same directory as the current file
+" uses expression to extract path from current file's path
+map <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
+map <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
+map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
+
+
+" disable cursor keys in normal mode
+map <Left>  :echo "no!"<cr>
+map <Right> :echo "no!"<cr>
+map <Up>    :echo "no!"<cr>
+map <Down>  :echo "no!"<cr>
+
+" disable cursor keys in insert mode
+imap <Left> <NOP>
+imap <Right> <NOP>
+imap <Up> <NOP>
+imap <Down> <NOP>
+
+set backupdir=~/.vim/_backup    " where to put backup files.
+set directory=~/.vim/_temp      " where to put swap files.
 
