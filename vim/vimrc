@@ -4,9 +4,8 @@ set nocompatible
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
-set t_Co=256
-set background=dark
-colorscheme molokai
+set background=light
+colorscheme solarized
 set number
 set ruler       " show the cursor position all the time
 set showcmd     " display incomplete commands
