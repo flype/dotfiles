@@ -4,7 +4,6 @@ fresh freshshell/fresh bin/fresh --bin
 fresh vim/vimrc --file
 fresh vim/vim --file=~/.vim/
 fresh ackrc --file=~/.ackrc
-fresh zsh/
 
 fresh-options --file=~/.zshrc --marker=#
   fresh zsh/\*
