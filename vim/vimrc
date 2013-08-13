@@ -151,4 +151,8 @@ nmap <silent> <leader>d <Plug>DashGlobalSearch
 
 " Use poweline fonts in airline
 let g:airline_powerline_fonts=1
+set laststatus=2
+let g:bufferline_echo = 0
+set ambiwidth=double
+set noshowmode
 
