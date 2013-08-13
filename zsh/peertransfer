@@ -1,1 +1,2 @@
 export PTCODE=/Volumes/peertransfer/code
+alias v='j platform && vagrant ssh'
