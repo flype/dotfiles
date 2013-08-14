@@ -38,3 +38,5 @@ ZSH_THEME="agnoster"
 plugins=(git vi-mode rbenv nyan)
 
 source $ZSH/oh-my-zsh.sh
+
+bindkey '^R' history-incremental-search-backward
