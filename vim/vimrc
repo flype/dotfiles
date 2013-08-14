@@ -156,3 +156,5 @@ let g:bufferline_echo = 0
 set ambiwidth=double
 set noshowmode
 
+" alias command
+command W w
