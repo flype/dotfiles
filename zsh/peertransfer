@@ -1,2 +1,5 @@
 export PTCODE=/Volumes/peertransfer/code
 alias v='j platform && vagrant ssh'
+
+alias com='ssh mother.peertransfer.com'
+alias me='ssh mother.peertransfer.me'
