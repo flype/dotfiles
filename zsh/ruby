@@ -1,0 +1,2 @@
+alias rake='bundle exec rake'
+alias rails='bundle exec rails'
