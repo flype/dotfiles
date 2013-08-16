@@ -159,6 +159,7 @@ set noshowmode
 " alias command
 command W w
 command Q q
+command Bd bd
 
 " F1 maps to ESC instead of help
 map <F1> <Esc>
