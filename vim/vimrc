@@ -164,6 +164,9 @@ command Wq wq
 command Q q
 command Bd bd
 
+" nerdtree toggle
+map <leader>n :NERDTreeToggle<CR>
+
 " F1 maps to ESC instead of help
 map <F1> <Esc>
 imap <F1> <Esc>
