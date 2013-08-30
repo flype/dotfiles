@@ -72,6 +72,7 @@ NeoBundle 'myusuf3/numbers.vim'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-fugitive'
 
 
 NeoBundleCheck
