@@ -73,6 +73,7 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'ck3g/vim-change-hash-syntax'
 
 
 NeoBundleCheck
