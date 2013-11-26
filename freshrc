@@ -5,6 +5,8 @@ fresh vim/vim --file=~/.vim/
 fresh ackrc --file=~/.ackrc
 fresh gitconfig --file=~/.gitconfig
 
+fresh zsh/zprofile --file=~/.zprofile
+
 fresh-options --file=~/.zshrc --marker=#
   fresh zsh/\*
   fresh freshshell/fresh contrib/source-build.sh
