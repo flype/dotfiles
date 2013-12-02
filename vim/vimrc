@@ -74,7 +74,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ck3g/vim-change-hash-syntax'
-
+NeoBundle 'sjl/splice.vim'
 
 NeoBundleCheck
 
