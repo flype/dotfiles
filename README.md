@@ -5,8 +5,9 @@ My personal dotfiles
 
 ### Vagrant debian specific installation
 ``` sh
-curl -O https://raw.github.com/flype/dotfiles/master/pkgs/autojump_20-2_all.deb
 sudo apt-get install python-argparse
+
+curl -O https://raw.github.com/flype/dotfiles/master/pkgs/autojump_20-2_all.deb
 sudo dpkg -i autojump_20-2_all.deb
 
 # use zsh instead of bash
