@@ -26,9 +26,7 @@ brew cask install iterm2
 brew cask install textmate
 brew cask install the-unarchiver
 brew cask install dropbox
-brew cask install vlc
 brew cask install transmission
-brew cask install truecrypt
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install spotify
