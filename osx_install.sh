@@ -48,3 +48,4 @@ brew cask install adium
 brew cask install xquartz
 brew cask install menumeters
 brew cask install bartender
+brew cask install skype
