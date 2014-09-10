@@ -50,3 +50,4 @@ brew cask install skype
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install chefdk
+brew cask install sketch
