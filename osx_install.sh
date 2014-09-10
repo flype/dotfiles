@@ -27,8 +27,6 @@ brew cask install textmate
 brew cask install the-unarchiver
 brew cask install dropbox
 brew cask install transmission
-brew cask install virtualbox
-brew cask install vagrant
 brew cask install spotify
 brew cask install soundcleod
 brew cask install calibre
@@ -49,3 +47,6 @@ brew cask install xquartz
 brew cask install menumeters
 brew cask install bartender
 brew cask install skype
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install chefdk
