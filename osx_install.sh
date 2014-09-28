@@ -52,3 +52,4 @@ brew cask install vagrant
 brew cask install chefdk
 brew cask install sketch
 brew cask install firefox
+brew cask install flux
