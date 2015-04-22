@@ -154,7 +154,7 @@ endif
 nmap <silent> <leader>d <Plug>DashGlobalSearch
 
 " Use poweline fonts in airline
-let g:airline_powerline_fonts=1
+" let g:airline_powerline_fonts=1
 set laststatus=2
 let g:bufferline_echo = 0
 set ambiwidth=double
@@ -172,3 +172,6 @@ map <leader>n :NERDTreeToggle<CR>
 " F1 maps to ESC instead of help
 map <F1> <Esc>
 imap <F1> <Esc>
+
+" ACK old version support
+let g:ack_default_options = " -H --nocolor --nogroup --column"
