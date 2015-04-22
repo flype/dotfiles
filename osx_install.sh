@@ -29,7 +29,7 @@ brew cask install dropbox
 brew cask install transmission
 brew cask install spotify
 brew cask install soundcleod
-brew cask install calibre
+brew cask install --force calibre
 brew cask install cloud
 brew cask install gitx
 brew cask install cyberduck
@@ -52,3 +52,5 @@ brew cask install vagrant
 brew cask install chefdk
 brew cask install sketch
 brew cask install firefox
+brew cask install flux
+brew cask install macdown
